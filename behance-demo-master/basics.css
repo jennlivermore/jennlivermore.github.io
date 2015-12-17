@@ -1,0 +1,224 @@
+/* GRID GRID GRID GRID GRID GRID GRID GRID GRID GRID GRID GRID GRID GRID GRID GRID */
+
+* {
+    box-sizing: border-box;
+    position: relative;  /* this saves us time later by declaring everything relative*/
+}
+
+.container,
+.contaner-fluid {
+    max-width: 1200px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: auto;
+    margin-right: auto;  /* this makes a nice box for the whole thing*/
+}
+
+.row::after,
+.group::after,
+.grouped::after,
+.clearfix::after {
+    content: '';
+    clear:both;
+    display: table;  /* this makes an invisable break in flow*/
+}
+
+.group {
+    margin-left: -1rem;
+    margin-right: -1rem;
+}
+
+.column,
+.columns {
+    float: left;
+    padding-left: 1rem; /* this makes gutter*/
+    padding-right: 1rem;
+}
+
+.one       { width: calc(100% / 3 * 01); }
+.two       { width: calc(100% / 3 * 02); }
+.three     { width: calc(100% / 3 * 03); }
+
+/* these styles declare dolumn widths */
+.offset-by-one       { margin-left: calc(100% / 3 * 01); }
+.offset-by-two       { margin-left: calc(100% / 3 * 02); }
+.offset-by-three     { margin-left: calc(100% / 3 * 03); }
+
+/* BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY*/
+
+main {
+    margin-top: 6em;
+    margin-left: 5em;
+    margin-right: 5em;
+}
+
+header {
+    background: white;
+    margin: 0;
+    padding: 1px;
+    height: 230px;
+    max-width: 2000px;
+}
+
+ul.nav{
+    list-style: none;
+    padding-left: 8em;
+    padding-top: 3em;
+    font-weight: 500;
+    font-size: .9em;
+    line-height: 2.25em;
+    letter-spacing: .2em;
+}
+
+ul.nav a {
+    color: #4C4C4C;
+}
+
+ul.nav a:active {
+    color: #C6C6E8;
+}
+
+/*ul.nav li:first-child{
+    letter-spacing: .3em;
+}*/
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    font-size: .75em;
+    background: #F0F0F0;
+}
+
+h1 {
+    margin-top: 1em;
+/*    font-weight: 500;
+    font-size: 2.5em;
+    letter-spacing: .03em;
+    font-family: Chaparral Pro;
+    color: #888888; */
+    float: right;
+    padding-right: 3em;
+}
+
+.title {
+    width: 290px;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: #6FA88A;
+}
+
+.project a {
+    display: block;
+    position: relative;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.project {
+    margin-bottom: 2rem;
+}
+
+.project h2 {
+    position:absolute;
+    font-weight: 500;
+    font-size: 1.25em;
+    color: #888888;
+    opacity: 0;
+    z-index: 9;
+    top: 7em;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+}
+
+.project:hover h2 {
+    opacity: 100;
+}
+
+.project:hover img {
+    opacity: .05;
+}
+
+.project-page button.close {
+    position: fixed;
+    top: 2em;
+    right: 3em;
+    appearance: none;
+    box-shadow: none;
+    border: none;
+    border-radius: 50%;
+    background-color: #D1E8C6;
+    width: 2.5em;
+    height: 2.5em;
+    font-weight: bold;
+    color: white;
+}
+
+footer p {
+    text-align: center;
+}
+
+.clearfix::after {
+    clear: both;
+    display: table;
+    content: '';
+}
+
+#dynamic-pages .project-page {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99999999;
+    background: rgba(245,245,245,.95);
+    overflow-y: scroll;
+}
+
+.project-page .inner {
+    padding-top: 7em;
+    padding-left: 20em;
+    padding-right: 20em;
+}
+
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
+
+.bio {
+    padding-left: 6em;
+    padding-right: 10em;
+    padding-top: 5em;
+    font-size: 1.25em;
+}
+
+.biophoto {
+    margin-left: 0;
+}
+
+h3 {
+    font-size: 1.5em;
+    font-weight: 100;
+}
+
+/* this is for hacky way for adding space between the | marks */
+.extraspace {
+    display: inline-block;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.links {
+    color: #6FA88A;
+    padding-top: 2em;
+}
